@@ -1,0 +1,9 @@
+Scalability: Use Auto Scaling Groups for EC2 instances or containers in ECS to scale out when needed. Use Lambda for serverless scalability, as it automatically scales with traffic.
+
+High Availability: Place resources like EC2 instances and RDS instances across multiple Availability Zones (AZs) for fault tolerance and high availability.
+
+Cost Optimization: Consider using Lambda (serverless) for variable workloads to avoid overprovisioning EC2. Use Spot Instances for non-critical compute workloads to reduce costs. Also, use S3 for cost-effective storage and archival.
+
+Security: Ensure IAM policies follow the principle of least privilege. Use VPC with private subnets for sensitive resources like databases and limit internet-facing resources (e.g., ALB, API Gateway) to necessary services. Ensure data is encrypted both at rest and in transit using KMS and SSL/TLS.
+
+Disaster Recovery: Implement cross-region replication for critical data and ensure that your application can withstand AZ failures by using load balancing and replication across AZs.
